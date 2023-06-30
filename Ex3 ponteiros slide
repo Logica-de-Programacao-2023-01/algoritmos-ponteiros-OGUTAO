@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+type Produto struct {
+	name    string
+	preço   int
+	estoque int
+}
+
+func Valore(p *Produto, newValor int) {
+	p.preço = newValor
+}
+func main() {
+	valoro := Produto{name: "Jebafone", preço: 1000000, estoque: 1}
+	fmt.Println("Preço antigo era de:", valoro)
+
+	Valore(&valoro, 2000000)
+	fmt.Println("Preço novo agora é de:", valoro)
+}

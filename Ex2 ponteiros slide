@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func jeba(ptr *bool) {
+	*ptr = !(*ptr)
+}
+func main() {
+	jebinha := true
+
+	fmt.Println("Jebinha antes era:", jebinha)
+	jeba(&jebinha)
+	fmt.Println("Agora Jebinha é:", jebinha)
+}

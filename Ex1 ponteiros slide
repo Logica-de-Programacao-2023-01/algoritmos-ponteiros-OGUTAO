@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+type Valor struct {
+	age int
+}
+
+func changevalor(p *Valor, newvalor int) {
+	p.age = newvalor
+}
+func main() {
+
+	a := Valor{20}
+	b := Valor{30}
+
+	fmt.Println("Valor de a:", a)
+	changevalor(&a, 30)
+	fmt.Println("Novo valor de a:", a)
+
+	fmt.Println("Valor de b:", b)
+	changevalor(&b, 20)
+	fmt.Println("Novo valor de b:", b)
+
+}
